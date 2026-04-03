@@ -78,8 +78,8 @@ func recordMetrics(m *metrics, flagAdress *string) {
 					m.userDownLinks.With(prometheus.Labels{"user_id": name}).Set(float64(downlink))
 					m.userUpLinks.With(prometheus.Labels{"user_id": name}).Set(float64(uplink))
 				}
-				time.Sleep(10 * time.Second)
 			}
+			time.Sleep(10 * time.Second)
 		}
 	}()
 }
